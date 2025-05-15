@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const $divSortie = document.querySelector("#sortie")
   $divSortie.insertAdjacentHTML('afterbegin', template_html_div)
   const $ulHobbies = $divSortie.querySelector('#hobbies')
-  array.forEach(item => {
-    $ulHobbies.insertAdjacentHTML('beforeend', `<li>${item}</li>`)
+  array.forEach((item, index) => {
+    $ulHobbies.insertAdjacentHTML('beforeend', `<li data-id="${index}">${item}</li>`)
   })
 })
 
