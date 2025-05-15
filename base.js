@@ -1,12 +1,21 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  const calcul = (birthday) => {
+    const dateNow = new Date();
+    const year = dateNow.getFullYear();
+    return year - birthday;
+  }
+
   const nomVariable = 'value'
-  let number = 14
+  let birthday = 1987
   let boolean = true // or False
   let array = new Array('ceci', 'est', 'un', 'tableau') // Index begin everytime to 0
   let object = {
     nameKey: 'string in object',
-    number: 5,
-    array: ['ceci', 'est', 'un', 'tableau', number],
+    birthday: 1987,
+    array: ['ceci', 'est', 'un', 'tableau', birthday],
     boolean: false,
     object: {
       nameKeyObjectInObject: 'Same to object',
@@ -20,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const template_html_div = `
   <div>
     <p>${nomVariable} => variable string</p>
-    <p>${number} => variable number</p>
+    <p>${calcul(birthday)} => variable number</p>
     <p>${boolean} => variable boolean</p>
     <p>${array} => variable array</p>
     <p>${object.array}</p>
