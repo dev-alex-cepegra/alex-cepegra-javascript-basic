@@ -1,0 +1,32 @@
+* {
+  list-style: none;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 30% auto;
+  max-height: 100vh;
+}
+
+.active {
+  filter: grayscale(1);
+  cursor: default;
+}
+
+ul {
+  max-height: 100%;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+.sidebar img {
+  width: 100%;
+}
+
+.body,
+img {
+  width: 100%;
+}
